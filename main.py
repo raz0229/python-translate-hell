@@ -64,6 +64,7 @@ def getTranslation(abv):
         response = translator.translate(text, dest=abv).text
     except Exception:
         print(f"\n🤖🦇: Error translating in {abv}")
+        return
     else:
         return response
 
