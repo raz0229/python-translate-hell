@@ -1,5 +1,6 @@
 import http.client
 import json
+from playsound import playsound
 
 text = input("Enter text: ")
 
@@ -39,4 +40,7 @@ def getTranslation(abv):
 if __name__ == "__main__":
     for (key, value) in languages.items():
         text = getTranslation(value)
+        playsound('note.wav')
         print(f"\n{key}: " + text)
+
+
